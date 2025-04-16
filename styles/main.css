@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@font-face
+{
+	font-family: Bebas Kai Regular;
+	src: url('../fonts/bkr.otf');
+}
+
+
+/* CSS RESET */
+* { margin: 0; padding: 0; box-sizing: inherit; }
+html { height: 100%; box-sizing: border-box; }
+body { position: relative; padding-bottom: 100px; min-height: 100%; }
+a { text-decoration: none; color: inherit; }
+button { border: none; background: inherit; outline: none; }
+
+.home { background-color: white; }
+
+
+.logoheader { width: 100%; margin-top: 20px; margin-bottom: 20px; }
+.body { width: 100%; text-align: center; }
+.form { }
+.login-field { border: none; width: 80%; height: 30px; padding-left: 10px; padding-right: 10px; box-sizing: border-box; font-family: Tahoma, Geneva, sans-serif; background-color: white; }
+.radius { border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; }
+/* La separación entre el cuerpo y el footer es la resta del padding bottom del body menos el total del alto total del footer */
+.footer { position: absolute; bottom: 0; width: 100%; padding: 10px; background-color: #efefef; text-align: center; font-family: Tahoma, Geneva, sans-serif; font-weight: bold; color: grey; }
+
+.login-message { background-color: white; border: none; width: 80%; height: 40px; margin: auto; padding: 10px; box-sizing: border-box; font-family: Tahoma, Geneva, sans-serif; border-top-right-radius: 5px; border-top-left-radius: 5px;  }
+
+.header { margin-top: 0; width: 100%; height: 50px; background-color: #74b9ff; text-align: center; }
+
+.index { width: 100%; background-color: #74b9ff; }
+.index .header { width: 100%; height: 100px; }
+.index .logo { margin-top: 40px; }
+.index .button { position: absolute; left: 6px; top: 2px; width: 48px; height: 48px; background: transparent url('../images/menu.png') no-repeat; }
+.index .menushow { display: none; width: 100%; background-color: #74b9ff; height: 90px; text-align: center; }
+.index .section { display: inline-block; width: 100%; font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 1em; font-weight: bold; color: white; cursor: pointer; text-shadow: 0px 0px 2px rgba(150, 150, 150, 1); }
+
+.indexcontent { width: 100%; margin-top: 20px; text-align: center; }
+.loginmessage { width: 80%; margin: 30px auto 0 auto; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-weight: bold; }
+.indeximage { display: block; margin: 0 auto; width: 100%; margin-top: 40px; }
+
+/* ESTILOS MENU LATERAL */
+.menubutton { position: absolute; left: 0; width: 48px; height: 48px; background: transparent url('../images/menu.png') no-repeat; margin-top: 1px; margin-left: 5px; border: none; z-index: 1; }
+.menubutton2 { width: 32px; height: 32px; background: transparent url('../images/close.png') no-repeat; margin-top: 1px; margin-left: 1px; float: right; border: none; }
+.menu { float: left; background-color: white; text-align: center; width: 60%; height: 100%; display: none; position: fixed; z-index: 12; box-shadow: 1px 0px 50px 5px rgba(52, 73, 94, 0.6); }
+.menu .navlist { width: 100%; text-align: left; margin: 15px 0px 15px 20px; }
+.menu .item { display: inline-block; font-family: "Bebas Kai Regular", sans-serif; font-size: 1.3em; color: grey; margin-bottom: 10px; }
+.menu .close { display: inline-block; margin-top: 15px; }
+
+/* CONTENEDOR PRINCIPAL (ABAJO DE FOOTER) */
+.body { width: 100%; }
+
+.about { width: 100%; margin: 0 auto; font-family: Tahoma, Geneva, sans-serif; color: grey; padding: 20px; }
+.about h2 { display: block; margin: 0 auto; text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.2); }
+.about h3 { display: block; margin: 0 auto; text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.2); }
+.about p { display: block; margin: 0 auto; text-align: justify; text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.2); }
+
+/* ESTILOS SECCION AGREGAR */
+.add { width: 100%; margin-top: 30px; text-align: left; }
+.add .button { display: block; width: 80%; height: 30px; margin: 0 auto 10px auto; background: white; color: grey; font-weight: bold; border: 1px solid grey; border-radius: 3px; cursor: pointer; }
+.add .form { display: none; width: 80%; margin: 0 auto 10px auto; padding: 15px; background: inherit; text-align: left; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 0.8em; border: 1px solid grey; border-radius: 3px; }
+.add .visible { display: block !important; }
+.add .fields { margin-bottom: 8px; color: grey; }
+.add .input { width: 100%; height: 21px; border: 1px solid grey; border-radius: 2px; padding: 0 5px; }
+.add .dimension { width: 50%; height: 21px; border: 1px solid grey; border-radius: 2px; padding: 0 5px; }
+.add .select { width: 47%; height: 21px; padding-left: 5px; border: 1px solid grey; border-radius: 2px; float: right; background: url('../images/arrow.png') no-repeat center right 5px; -webkit-appearance: none; -moz-appearance: none;}
+.add .submit { width: 100%; height: 25px; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; margin-top: 5px; }
+.add .selectCategory { width: 100%; height: 21px; padding-left: 5px; border: 1px solid grey; border-radius: 2px; float: left; background: url('../images/arrow.png') no-repeat center right 5px; -webkit-appearance: none; -moz-appearance: none;}
+
+.priceimage { background: url('../images/peso.png') no-repeat center left 2px; padding-left: 18px !important; }
+
+.help { width: 100%; margin-top: 30px; text-align: center; }
+.help .option { display: block; width: 90%; height: 30px; margin: 0 auto 10px auto; background: white; color: grey; font-weight: bold; border: 1px solid grey; border-radius: 3px; cursor: pointer; }
+.help .textbox { display: none; width: 90%; margin: 0 auto 10px auto; padding: 8px 8px; background: white; color: grey; font-family: Tahoma, Geneva, sans-serif; font-size: 0.8em; border: 1px solid grey; border-radius: 3px; text-align: justify; text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.2); }
+
+/* ESTILOS SECCION MIS PRODUCTOS */
+.articles { width: 100%; margin-top: 30px; text-align: center; }
+.articlesprofile { margin-top: 0 !important; }
+.articles .searchbar { width: 80%; height: 20px; margin: 0 auto 10px auto; text-align: left; }
+.articles .searchinput { width: 75%; height: 100%; float: left; border: 1px solid grey; border-radius: 2px; padding: 0 5px; }
+.articles .searchbutton { width: 22%; height: 100%; float: right; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; cursor: pointer; }
+.articles .list { width: 90%; margin: 20px auto 0 auto; }
+.articles .profilelist { width: 90%; margin: 10px auto 0 auto; }
+.articles .article { width: 100%; background-color: rgba(74, 76, 78, 0.1); padding: 5px 0 5px 8px; text-align: left; font-family: Verdana, Geneva, sans-serif; font-size: 0.8em; border: 1px solid #74b9ff; border-radius: 2px 2px 0 0; }
+.articles .edit { display: block; width: 100%; height: 22px; margin-bottom: 10px; background-color: #74b9ff; border-radius: 0 0 2px 2px; color: white; cursor: pointer; }
+.articles .providers { width: 100%; height: 62px; background-color: rgba(74, 76, 78, 0.1); margin-bottom: 10px; padding: 5px 5px 5px 8px; text-align: left; font-family: Verdana, Geneva, sans-serif; font-size: 0.8em; border: 1px solid #74b9ff; border-radius: 2px; cursor: pointer;}
+.articles .providerphoto { display: block; float: right; }
+.articles .header { display: block; background-color: white; width: 90%; height: 42px; margin: 0 auto 0 auto; border: 1px solid grey; border-radius: 4px; text-align: left; font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; font-weight: bold; padding: 5px 15px; color: grey; }
+
+.modal { display: none; position: fixed; width: 100%; height: 100%; z-index: 8; background: rgba(74, 76, 78, 0.5); text-align: left; }
+.modal .container { display: block; position: fixed; left: 50%; margin-left: -45%; margin-top: 100px; width: 90%; height: 150px; z-index: 10; background: white; border: 1px solid black; border-radius: 5px; }
+.modal .container2 { display: block; position: fixed; left: 50%; margin-left: -45%; margin-top: 100px; width: 90%; height: 300px; z-index: 10; background: white; border: 1px solid black; border-radius: 5px; }
+.modal .delete { display: block; text-align: center; padding: 45px 15px 15px 15px; }
+.modal .message { display: block; margin-bottom: 5px; font-family: Verdana, Geneva, sans-serif; }
+.modal .editinput { width: 80%; height: 21px; border: 1px solid grey; border-radius: 2px; padding: 0 5px; margin-bottom: 10px; }
+.modal .editlabel { color: grey; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 0.8em; }
+.modal .deletebutton { display: block; width: 80%; height: 30px; margin: 0 auto 10px auto; background: white; color: grey; font-weight: bold; border: 1px solid grey; border-radius: 3px; cursor: pointer; }
+
+.profile { display: block; width: 100%; }
+.profile .cover { display: block; width: 100%; height: 70px; z-index: 8; background-color: #95a5a6; }
+.profile .picture { display: block; position: relative; left: 50%; margin-left: -40px; top: 30px; width: 80px; height: 80px; z-index: 10; background-color: white; border: 0.5px solid grey; border-radius: 50%; box-sizing: content-box; }
+.profile .photo { border-radius: 50%; }
+.profile .profiledata { display: block; width: 90%; margin: 60px auto 10px auto; border: 1px solid grey; border-radius: 4px; color: grey; padding: 5px 5px 5px 10px; text-align: center; font-family: "Trebuchet MS", Helvetica, sans-serif; }
+.profile .editabledata { display: block; width: 90%; margin: 0 auto; border: 1px solid grey; border-radius: 4px; text-align: left; padding: 15px 15px; }
+.profile .input { width: 100%; height: 22px; border: 1px solid grey; border-radius: 2px; padding: 2px 4px; font-family: Tahoma, Geneva, sans-serif; }
+.profile .area { width: 100%; height: 50px; border: 1px solid grey; border-radius: 2px; resize: none; padding: 2px 4px; font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; }
+.profile .contact { display: block; margin-bottom: 10px; color: grey; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 1em; }
+.profile .label { color: grey; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 0.8em; }
+.profile .update { display: block; width: 100%; height: 30px; margin-top: 15px; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; }
+.profile .resume { font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; }
+.profile .contactdata { display: block; width: 90%; margin: 0 auto 10px auto; border: 1px solid grey; border-radius: 4px; text-align: left; font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; padding: 5px 15px; color: grey; }
+.profile .title { font-weight: bold; }
+
+.errorcontainer { width: 100%; }
+.error { display: block; width: 90%; min-height: 42px; color: grey; background-color: rgba(255, 121, 121, 0.4); border: 1px solid grey; border-radius: 2px; font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; font-weight: bold; text-align: center; padding: 5px 15px; margin: 0 auto 10px auto; }
+
+.sectionname { padding-top: 10px; font-size: 1.5em; color: white; font-family: "Trebuchet MS", Helvetica, sans-serif;  }
+.logomenu { width: 100%; }
+
+@media only screen and (min-width: 768px)
+{
+	body { position: relative; margin: 0; padding-bottom: 100px; min-height: 100%; text-align: center; }
+	.menu { float: left; background-color: white; text-align: center; width: 20%; height: 100%; display: none; position: fixed; z-index: 2 box-shadow: 1px 0px 50px 5px rgba(52, 73, 94, 0.6); }
+	.articles { width: 50%; text-align: center; margin: 0 auto; margin-top: 30px; }
+	.articles .article { width: 100%; background-color: rgba(74, 76, 78, 0.1); padding: 5px 0 5px 8px; text-align: left; font-family: Verdana, Geneva, sans-serif; font-size: 1em; border: 1px solid #74b9ff; border-radius: 2px 2px 0 0; }
+	.articles .edit { display: block; width: 100%; height: 22px; margin-bottom: 10px; background-color: #74b9ff; font-family: Verdana, Geneva, sans-serif; font-size: 1em; border-radius: 0 0 2px 2px; color: white; cursor: pointer; }
+	.profile { display: block; width: 50%; margin: 0 auto; }
+	.error { display: block; width: 45%; min-height: 42px; color: grey; background-color: rgba(255, 121, 121, 0.4); border: 1px solid grey; border-radius: 2px; font-family: Tahoma, Geneva, sans-serif; font-size: 0.7em; font-weight: bold; text-align: center; padding: 5px 15px; margin: 0 auto 10px auto; }
+	.add { width: 40%; text-align: center; margin: 0 auto; margin-top: 30px; }
+	.help { width: 40%; text-align: center; margin: 0 auto; margin-top: 30px; }
+	.logoheader { width: 30%; min-width: 650px; margin-top: 20px; margin-bottom: 20px; }
+	.login-field { border: none; width: 20%; min-width: 35%; height: 30px; padding-left: 10px; padding-right: 10px; box-sizing: border-box; background-color: white; }
+	.login-message { background-color: white; border: none; width: 20%; min-width: 35%; height: 40px; margin: auto; padding: 10px; box-sizing: border-box; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+	.index { width: 100%; height: 130px; max-height: 130px; background-color: #74b9ff; }
+	.index .header { width: 25%; height: 130px; display: inline-block; float: left; }
+	.index .logo { margin: 36px 0 0 12px; float: left; cursor: pointer; }
+	.index .menushow { display: flex; justify-content: center; width: 75%; background-color: #74b9ff; height: 130px; padding: 0 15px; }
+	.index .section { display: inline; position: relative; top: 40%; width: 24.7%; font-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 1.2em; font-weight: bold; color: white; padding: 0 15px; }
+	.index .section:hover { cursor: pointer; }
+	.index .button { display: none; }
+	.modal .container { display: block; position: fixed; left: 50%; margin-left: -15%; margin-top: 100px; width: 30%; height: 150px; z-index: 10; background: white; border: 1px solid black; border-radius: 5px; }
+	.modal .container2 { display: block; position: fixed; left: 50%; margin-left: -15%; margin-top: 100px; width: 30%; height: 300px; z-index: 10; background: white; border: 1px solid black; border-radius: 5px; }
+	.about { width: 65%; margin: 0 auto; font-family: Tahoma, Geneva, sans-serif; color: grey; padding: 20px; }
+	.loginmessage { width: 40%; margin: 30px auto 0 auto; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-weight: bold; }
+	.indeximage { display: block; margin: 0 auto; width: 40%; margin-top: 40px; }
+}
+
+.table{ width:100% ;}
