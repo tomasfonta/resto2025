@@ -18,7 +18,7 @@
 		{
 			while($row = mysqli_fetch_assoc($result))
 			{
-				$nameok = strtoupper($row['user_name']);
+				$nameok = strtoupper($row['user_loginname']);
 				$photook = $row['user_photo'];
 				$idok = $row['user_id'];
 

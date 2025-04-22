@@ -23,6 +23,7 @@ else
 	$class1 = "form";
 	$class2 = "form";
 }
+
 ?>
 <div class="add">
 	<button class="button" onclick="switchforms('product');">NUEVO PRODUCTO</button>
@@ -51,36 +52,6 @@ else
 			<div class="fields">
 				Precio<br>
 				<input id="price" type="text" class="input priceimage" name="price" maxlength="10">
-			</div>
-			<div class="fields">
-				Categoria<br>
-				<select id="category" class="selectCategory" name="category">
-				<?php
-				
-						// Busco todas las categorias
-						$dbconnection = mysqli_connect($db_server, $db_user, $db_password, $db_name);
-						if (!$dbconnection)
-						{
-				    		echo "Error conectando a la base de datos";
-				    		die();
-						}
-						$ownerok = $_SESSION['id'];
-						$sentence = "SELECT * FROM category join users_category on category.category_id = users_category.category_id WHERE users_category.user_id ='$ownerok'";
-						$result = mysqli_query($dbconnection, $sentence);
-						$rows = mysqli_num_rows($result);
-						if($rows > 0)
-						{
-							while($row = mysqli_fetch_assoc($result))
-							{
-								$id = $row['category_id'];
-								$name = $row['category_name'];
-								
-								echo "<option value=$id>$name</option>";
-							}
-						}
-				?>
-				</select> 
-				<br>
 			</div>
 			<input type="hidden" name="case" value="0">
 		</form>

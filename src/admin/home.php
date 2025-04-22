@@ -48,14 +48,14 @@ if(!empty($_GET['pagina']))
 
 		default:
 			$option = 'index';
-			$title = 'Inicio';
+			$title = 'Inicio2';
 			break;
 	}
 }
 else
 {
 	$option = 'index';
-	$title = 'Inicio';
+	$title = 'Inicio3';
 }
 
 date_default_timezone_set("America/Argentina/Buenos_Aires");

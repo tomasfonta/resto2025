@@ -10,7 +10,7 @@ if(!isset($_SESSION['loginname']))
 	die();
 }
 
-if($_GET)
+if($_POST)
 {
 	$dbconnection = mysqli_connect($db_server, $db_user, $db_password, $db_name);
 	
@@ -20,50 +20,55 @@ if($_GET)
     	die();
 	}
 
-	$nameok = mysqli_real_escape_string($dbconnection, $_GET['data1']);
+	
+	$nameok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['nombre']);
 	$nameok = strip_tags($nameok);
 	
-	$descriptionok = mysqli_real_escape_string($dbconnection, $_GET['data2']);
+	$descriptionok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['descripcion']);
 	$descriptionok = strip_tags($descriptionok);
 	
-	$locationok = mysqli_real_escape_string($dbconnection, $_GET['data3']);
+	$locationok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['direccion']);
 	$locationok = strip_tags($locationok);
 	
-	$telephone1ok = mysqli_real_escape_string($dbconnection, $_GET['data4']);
+	$telephone1ok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['tel1']);
 	$telephone1ok = strip_tags($telephone1ok);
 	
-	$telephone2ok = mysqli_real_escape_string($dbconnection, $_GET['data5']);
+	$telephone2ok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['tel2']);
 	$telephone2ok = strip_tags($telephone2ok);
 	
-	$cellphone1ok = mysqli_real_escape_string($dbconnection, $_GET['data6']);
+	$cellphone1ok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['cel1']);
 	$cellphone1ok = strip_tags($cellphone1ok);
 	
-	$cellphone2ok = mysqli_real_escape_string($dbconnection, $_GET['data7']);
+	$cellphone2ok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['cel2']);
 	$cellphone2ok = strip_tags($cellphone2ok);
 	
-	$contactemailok = mysqli_real_escape_string($dbconnection, $_GET['data8']);
+	$contactemailok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['email']);
 	$contactemailok = strip_tags($contactemailok);
 	
-	$websiteok = mysqli_real_escape_string($dbconnection, $_GET['data9']);
+	$websiteok = mysqli_real_escape_string($dbconnection, $_POST['updateUser']['web']);
 	$websiteok = strip_tags($websiteok);
 
 	$owner = $_SESSION['id'];
+	
+
 
 	$sql = "UPDATE users SET user_name='$nameok', user_description='$descriptionok', user_location='$locationok', user_telephone1='$telephone1ok', user_telephone2='$telephone2ok', user_cellphone1='$cellphone1ok', user_cellphone2='$cellphone2ok', user_contactemail='$contactemailok', user_website='$websiteok' WHERE user_id = '$owner'";
 
 	if (mysqli_query($dbconnection, $sql))
-	{
-	    echo "<div class='error'>Actualizado correctamente</div>";
+	{	
+	    header('Location: ../home.php?pagina=perfilCliente');
+		die();
 	}
 	else
 	{
-    	echo "<div class='error'>Error al intentar actualizar</div>";
+    	echo "Error al intentar actualizar";
 	}
 	mysqli_close($dbconnection);
 }
 else
 {
-	echo "<div class='error'>Error al intentar actualizar</div>";
+	echo "Error al intentar actualizar";
+	header('Location: ../home.php?pagina=perfilCliente');
 	die();
 }
 
