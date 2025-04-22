@@ -1,0 +1,61 @@
+table name: users
+rows:
+ user_id
+ user_type
+ user_loginname
+ user_location
+ user_telephone1
+ user_telephone2
+ user_cellphone1
+ user_cellphone2
+ user_contactemail
+ user_website
+ user_name
+ user_description
+ user_photo
+ user_type   (boolean)
+ user_count
+ user_password
+
+table name: offers
+rows:
+ offer_name
+ offer_dimension
+ offer_brand
+ offer_minimun
+ offer_time
+ offer_price
+ offer_date
+ offer_owner
+
+table name: products
+rows:
+ product_name
+ product_dimension
+ product_brand
+ product_price
+ price
+ product_date
+ product_owner fk with users
+ product_category fk category
+
+table name: category
+rows:
+ category_id
+ category_name
+
+table name: requests
+rows:
+ request_name
+ request_dimension
+ request_brand
+ request_id
+ category_name
+ request_owner fk with users
+
+
+table name: users_category
+ row:
+ category_id fk category
+ user_id  fk users 
+
