@@ -26,7 +26,7 @@ if(!empty($_GET['pagina']))
 	if($select === 'inicio')
 	{
 		$option = 'buscar';
-		$title = 'Inicio2';
+		$title = 'Buscar';
 	}
 	elseif($select === 'perfil')
 	{
@@ -139,13 +139,14 @@ date_default_timezone_set("America/Argentina/Buenos_Aires");
 	
 	<?php 
 		include 'system/pages/clients/layout/header.php';
-	if($_SESSION['type'] == 1)
-	{	 
-		include 'system/pages/clients/layout/navClients.php'; 
-	}
+	
 	if($_SESSION['type'] == 0)
 	{	 
 		include 'system/pages/providers/layout/navProviders.php'; 
+	}
+	if($_SESSION['type'] == 1)
+	{	 
+		include 'system/pages/clients/layout/navClients.php'; 
 	}
 	?>
 	<body class="home">

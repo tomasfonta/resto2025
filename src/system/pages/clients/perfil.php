@@ -114,7 +114,7 @@ date_default_timezone_set("America/Argentina/Buenos_Aires");
                         								$ownerid = $row['offer_owner'];
                         								$minimun = $row['offer_minimun'];
                         								$time = $row['offer_time'];
-                        								$expiration = date("d/m/Y H:i \h\s", $time);
+                        								$expiration = date("d/m/Y H:i \h\s",strtotime($row['offer_time']));
                         								$price = number_format($row['offer_price'], 2, ',', '.');
                         								$date = date("d/m/Y H:i \h\s", strtotime($row['offer_date']));
                         								
