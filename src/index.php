@@ -264,23 +264,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Rubén: +54 9 341 3780011</p>
-          </div>
-          <div class="col-lg-3 ml-auto text-center">
+          <div class="col-lg ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
             <p>Luis: +54 9 341 6412407</p>
           </div>
-          <div class="col-lg-3 ml-auto text-center">
+          <div class="col-lg ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Martín: +54 9 341 3742955</p>
-          </div>
-          <div class="col-lg-3 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              contacto@restocompras.com
-            </p>
+            <p>Tomas: +34 649006569</p>
           </div>
         </div>
       </div>

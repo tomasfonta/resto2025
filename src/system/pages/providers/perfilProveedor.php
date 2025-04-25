@@ -14,9 +14,7 @@ if($rows > 0)
 {
 	while($row = mysqli_fetch_assoc($result))
 	{
-		$user_email = $row['user_email'];
 		$user_loginname = $row['user_loginname'];
-		$user_registered = $row['user_registered'];
 		$user_location = $row['user_location'];
 		$user_telephone1 = $row['user_telephone1'];
 		$user_telephone2 = $row['user_telephone2'];

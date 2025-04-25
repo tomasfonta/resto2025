@@ -249,8 +249,9 @@ function eliminar(id) {
 			url:   'actions/nuevoProducto.php',
 			type:  'post',
 			success:  function (response) {
+				console.log(response);
 				$('#response').html(response);
-			    setTimeout(function(){location.reload(); }, 1000);
+			    setTimeout(function(){location.reload(); }, 10000000);
 			}
 		});
   	});
