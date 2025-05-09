@@ -1,10 +1,9 @@
 <div class="articles">
-	<div class="input-field" id="input-container-3">
-                    <label for="navbar-search">Buscar:</label>
-                    <input id="navbar-search" type="text">
-                </div>
-                <table class="table" id="searchable-3">
-                    <tbody>
+	<div class="searchbar">
+		<input id="searchproduct" onkeydown="enter(event, 3);" type="text" class="searchinput" placeholder="Nombre, marca o dimension">
+		<button class="searchbutton" onclick="search('searchproduct', 'list', 3);">Buscar</button>
+	</div>
+	<div id="list" class="list">
 	<?php
 		$dbconnection = mysqli_connect($db_server, $db_user, $db_password, $db_name);
 		if (!$dbconnection)
@@ -12,7 +11,7 @@
     		echo "Error conectando a la base de datos";
     		die();
 		}
-		$sentence = "SELECT * FROM products JOIN category ON category.category_id = products.product_category";
+		$sentence = "SELECT * FROM products";
 		$result = mysqli_query($dbconnection, $sentence);
 		$rows = mysqli_num_rows($result);
 		if($rows > 0)
@@ -27,21 +26,15 @@
 				$price = $row['product_price'];
 				$priceok = number_format($price, 2, ',', '.');
 				$date = date("d/m/Y H:i \h\s", strtotime($row['product_date']));
-				$category = $row['category_name'];
 
-				echo "<tr>";
-				echo "<td>";
 				echo "<div class='article'>\n";
 				echo "<strong>$name</strong><br>";
 				echo "Marca: $brand<br>";
 				echo "Dimensión: $dimension<br>";
-				echo "<h2>Precio: $$priceok </h2>";
+				echo "Precio: $$priceok<br>";
 				echo "Última edición: $date<br>";
-				echo "Categoria: $category<br>";
 				echo "</div>\n";
 				echo "<a href='profile.php?usuario=$ownerid'><span class='edit'>$ownername</span></a>\n";
-				echo "</td>";
-				echo "</tr>";
 			}
 		}
 		else
@@ -53,11 +46,3 @@
 	?>
 	</div>
 </div>
-<script>
-$(document).ready(function() {
-$('#searchable-3').searchIt({
-        itemSelector: 'tr',
-        $searchInput: $('#input-container-3').find('input'),
-    });
-});
-</script>

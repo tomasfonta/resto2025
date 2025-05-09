@@ -16,7 +16,6 @@ button { border: none; background: inherit; outline: none; }
 
 .home { background-color: white; }
 
-
 .logoheader { width: 100%; margin-top: 20px; margin-bottom: 20px; }
 .body { width: 100%; text-align: center; }
 .form { }
@@ -66,7 +65,6 @@ button { border: none; background: inherit; outline: none; }
 .add .dimension { width: 50%; height: 21px; border: 1px solid grey; border-radius: 2px; padding: 0 5px; }
 .add .select { width: 47%; height: 21px; padding-left: 5px; border: 1px solid grey; border-radius: 2px; float: right; background: url('../images/arrow.png') no-repeat center right 5px; -webkit-appearance: none; -moz-appearance: none;}
 .add .submit { width: 100%; height: 25px; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; margin-top: 5px; }
-.add .selectCategory { width: 100%; height: 21px; padding-left: 5px; border: 1px solid grey; border-radius: 2px; float: left; background: url('../images/arrow.png') no-repeat center right 5px; -webkit-appearance: none; -moz-appearance: none;}
 
 .priceimage { background: url('../images/peso.png') no-repeat center left 2px; padding-left: 18px !important; }
 
@@ -145,5 +143,3 @@ button { border: none; background: inherit; outline: none; }
 	.loginmessage { width: 40%; margin: 30px auto 0 auto; background: rgba(74, 76, 78, 0.2); color: grey; border: 1px solid grey; border-radius: 2px; padding: 5px; font-family: Tahoma, Geneva, sans-serif; font-weight: bold; }
 	.indeximage { display: block; margin: 0 auto; width: 40%; margin-top: 40px; }
 }
-
-.table{ width:100% ;}

@@ -45,7 +45,7 @@ if(!empty($_POST))
 
 		if($data['user_type'] == 0)
 		{
-			header('Location: home.php?pagina=perfil');
+			header('Location: home.php?pagina=pedidos');
 			die();
 		}
 		else
@@ -78,23 +78,23 @@ else
     <meta name="description" content="restocompras">
     <meta name="author" content="restocompras">
     
-    <link rel="shortcut icon" href="/img/resto.ico.png">
+    <link rel="shortcut icon" href="index/img/resto.ico.png">
 
     <title>RestoCompras</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="index/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="index/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="index/css/creative.min.css" rel="stylesheet">
 
   </head>
 
@@ -547,43 +547,28 @@ Las publicaciones de los Usuarios deberán consignar el precio del producto.    
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">Contacto</h2>
             <hr class="my-4">
-            
           </div>
         </div>
         <div class="row">
           <div class="col-lg-3 ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Rubén: +54 9 341 3780011</p>
-          </div>
-          <div class="col-lg-3 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
             <p>Luis: +54 9 341 6412407</p>
-          </div>
-          <div class="col-lg-3 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Martín: +54 9 341 3742955</p>
-          </div>
-          <div class="col-lg-3 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              contacto@restocompras.com
-            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index/vendor/jquery/jquery.min.js"></script>
+    <script src="index/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="index/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="index/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="index/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="index/js/creative.min.js"></script>
 
   </body>
 

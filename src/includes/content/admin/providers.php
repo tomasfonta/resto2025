@@ -135,7 +135,7 @@ else
 								<input type=\"button\" value=\"editar\" onclick=\"modificar('$id')\"/></div>";
 						echo "Última edición: $date<br>";
 						echo "</div>\n";
-						echo "<span class='edit'></span>\n";
+						echo "<span onclick=\"eliminar('$id')\" class='edit'>Eliminar</span>\n";
 					}
 					echo "</div>\n</div>\n";
 				}

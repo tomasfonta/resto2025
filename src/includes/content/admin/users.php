@@ -16,7 +16,7 @@
 			{
 				$user_loginname = $row['user_loginname'];
 				$user_password = $row['user_password'];
-				$user_email = $row['user_email'];
+				$user_email = $row['user_contactemail'];
 				$type = $row['user_type'];
 				
 				echo "<div class='article'>\n";

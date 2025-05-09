@@ -12,106 +12,88 @@ var loading4 = 0;
 var ajaxconnection5;
 var loading5 = 0;
 
-function toggle(id)
-{
+function toggle(id) {
 	var x = document.getElementById(id);
-	if(x.style.display == 'block')
-	{
+	if (x.style.display == 'block') {
 		x.style.display = "none";
 	}
-	else
-	{
+	else {
 		x.style.display = "block";
 	}
 }
 
-function hide(id)
-{
+function hide(id) {
 	document.getElementById(id).style.display = "none";
 }
 
-function showmodal(id, type)
-{
+function showmodal(id, type) {
 	document.getElementById("modal").style.display = "block";
 	deleteid = id;
 	deletetype = type;
 }
 
-function showedit(id, type)
-{
+function showedit(id, type) {
 	document.getElementById("modaledit").style.display = "block";
 	deleteid = id;
 	deletetype = type;
 }
 
-function enter(e, id)
-{
+function enter(e, id) {
 	var code = (e.keyCode ? e.keyCode : e.which);
-	if(code == 13)
-	{
- 		switch(id)
- 		{
- 			case 1:
- 				search('searchmyproducts', 'list', 1);
- 				break;
+	if (code == 13) {
+		switch (id) {
+			case 1:
+				search('searchmyproducts', 'list', 1);
+				break;
 
- 			case 2:
- 				search('searchmyoffers', 'list', 2);
- 				break;
+			case 2:
+				search('searchmyoffers', 'list', 2);
+				break;
 
- 			case 3:
- 				search('searchproduct', 'list', 3);
- 				break;
+			case 3:
+				search('searchproduct', 'list', 3);
+				break;
 
- 			case 4:
- 				search('searchoffers', 'list', 4);
- 				break;
+			case 4:
+				search('searchoffers', 'list', 4);
+				break;
 
- 			case 5:
- 				search('searchproviders', 'list', 5);
- 				break;
+			case 5:
+				search('searchproviders', 'list', 5);
+				break;
 
- 			default:
- 				break;
- 		}
+			default:
+				break;
+		}
 	}
 }
 
 
-function modify()
-{
+function modify() {
 	var edittime = document.getElementById("edittime").value;
 	var editprice = document.getElementById("editprice").value;
-	if(editprice < 0 || editprice.length == 0 || isNaN(editprice))
-	{
+	if (editprice < 0 || editprice.length == 0 || isNaN(editprice)) {
 		document.getElementById("editprice").style.border = "1px solid #ff7675";
 		return;
 	}
-	else
-	{
+	else {
 		document.getElementById("editprice").style.border = "1px solid green";
 	}
-	if(edittime < 0 || edittime.length == 0 || isNaN(edittime))
-	{
+	if (edittime < 0 || edittime.length == 0 || isNaN(edittime)) {
 		document.getElementById("edittime").style.border = "1px solid #ff7675";
 		return;
 	}
-	else
-	{
+	else {
 		document.getElementById("edittime").style.border = "1px solid green";
 	}
-	if (loading5 == 0)
-	{
-		if (window.XMLHttpRequest)
-		{
+	if (loading5 == 0) {
+		if (window.XMLHttpRequest) {
 			ajaxconnection5 = new XMLHttpRequest();
 		}
-		else if (window.ActiveXObject)
-		{
+		else if (window.ActiveXObject) {
 			ajaxconnection5 = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		else
-		{
+		else {
 			alert("Problema con la conexión");
 			return false;
 		}
@@ -120,49 +102,38 @@ function modify()
 
 		ajaxconnection5.onreadystatechange = getdata5;
 		ajaxconnection5.open("GET", url, true);
-        ajaxconnection5.send();
-    }
-    else
-    {
-       	alert("Espere a terminar la carga");
-    }
+		ajaxconnection5.send();
+	}
+	else {
+		alert("Espere a terminar la carga");
+	}
 }
 
-function getdata5()
-{
-	if (ajaxconnection5.readyState == 4)
-	{
-		if (ajaxconnection5.status == 200)
-		{
+function getdata5() {
+	if (ajaxconnection5.readyState == 4) {
+		if (ajaxconnection5.status == 200) {
 			hide("modal");
-			location.reload(); 
+			location.reload();
 		}
-		else
-		{
+		else {
 			alert("Problema al traer datos");
 		}
 		loading5 = 0;
 	}
-	else
-	{
+	else {
 		loading5 = 1;
 	}
 }
 
-function drop()
-{
-	if (loading == 0)
-	{
-		if (window.XMLHttpRequest)
-		{
+function drop() {
+	if (loading == 0) {
+		if (window.XMLHttpRequest) {
 			ajaxconnection = new XMLHttpRequest();
 		}
-		else if (window.ActiveXObject)
-		{
+		else if (window.ActiveXObject) {
 			ajaxconnection = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		else
-		{
+		else {
 			alert("Problema con la conexión");
 			return false;
 		}
@@ -171,52 +142,42 @@ function drop()
 
 		ajaxconnection.onreadystatechange = getdata;
 		ajaxconnection.open("GET", url, true);
-        ajaxconnection.send();
-    }
-    else
-    {
-       	alert("Espere a terminar la carga");
-    }
+		ajaxconnection.send();
+	}
+	else {
+		alert("Espere a terminar la carga");
+	}
 }
 
-function getdata()
-{
-	if (ajaxconnection.readyState == 4)
-	{
-		if (ajaxconnection.status == 200)
-		{
+function getdata() {
+	if (ajaxconnection.readyState == 4) {
+		if (ajaxconnection.status == 200) {
 			hide("modal");
-			location.reload(); 
+			location.reload();
 		}
-		else
-		{
+		else {
 			alert("Problema al traer datos");
 		}
 		loading = 0;
 	}
-	else
-	{
+	else {
 		loading = 1;
 	}
 
 }
 
-function switchforms(id)
-{
-	if(id == 'product')
-	{
+function switchforms(id) {
+	if (id == 'product') {
 		document.getElementById(id).style.display = "block";
 		document.getElementById("offer").style.display = "none";
 	}
-	else if(id == 'offer')
-	{
+	else if (id == 'offer') {
 		document.getElementById(id).style.display = "block";
 		document.getElementById("product").style.display = "none";
 	}
 }
 
-function updateprofile()
-{
+function updateprofile() {
 	var uname = encodeURIComponent(document.getElementById("uname").value);
 	var udescription = encodeURIComponent(document.getElementById("udescription").value);
 	var ulocation = encodeURIComponent(document.getElementById("ulocation").value);
@@ -226,18 +187,14 @@ function updateprofile()
 	var ucellphone2 = encodeURIComponent(document.getElementById("ucellphone2").value);
 	var ucontactemail = encodeURIComponent(document.getElementById("ucontactemail").value);
 	var uwebsite = encodeURIComponent(document.getElementById("uwebsite").value);
-	if (loading2 == 0)
-	{
-		if (window.XMLHttpRequest)
-		{
+	if (loading2 == 0) {
+		if (window.XMLHttpRequest) {
 			ajaxconnection2 = new XMLHttpRequest();
 		}
-		else if (window.ActiveXObject)
-		{
+		else if (window.ActiveXObject) {
 			ajaxconnection2 = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		else
-		{
+		else {
 			alert("Problema con la conexión");
 			return false;
 		}
@@ -246,54 +203,44 @@ function updateprofile()
 
 		ajaxconnection2.onreadystatechange = getdata2;
 		ajaxconnection2.open("GET", url, true);
-        ajaxconnection2.send();
-    }
-    else
-    {
-       	alert("Espere a terminar la carga");
-    }
+		ajaxconnection2.send();
+	}
+	else {
+		alert("Espere a terminar la carga");
+	}
 }
 
-function getdata2()
-{
-	if (ajaxconnection2.readyState == 4)
-	{
-		if (ajaxconnection2.status == 200)
-		{
-			location.reload(); 
+function getdata2() {
+	if (ajaxconnection2.readyState == 4) {
+		if (ajaxconnection2.status == 200) {
+			location.reload();
 		}
-		else
-		{
+		else {
 			alert("Problema al traer datos");
 		}
 		loading2 = 0;
 	}
-	else
-	{
+	else {
 		loading2 = 1;
 	}
 
 }
 
-function submitform(id)
-{
+function submitform(id) {
 	var input1 = document.getElementById(id).elements[0];
 	var input2 = document.getElementById(id).elements[1];
 	var input3 = document.getElementById(id).elements[2];
 	var value1 = input3.value.replace(" ", "");
-	
-	if(id == 'form3')
-	{
+
+	if (id == 'form3') {
 		var input4 = 1234;
 	}
-	else
-	{
+	else {
 		var input4 = document.getElementById(id).elements[4];
 		var value2 = input4.value.replace(" ", "");
 	}
 
-	if(id == 'form2')
-	{
+	if (id == 'form2') {
 		var input5 = document.getElementById(id).elements[5];
 		var input6 = document.getElementById(id).elements[6];
 		var value3 = input5.value.replace(" ", "");
@@ -302,111 +249,90 @@ function submitform(id)
 
 	var error1, error2, error3, error4, error5, error6;
 
-	if(input1.value.length == 0)
-	{
+	if (input1.value.length == 0) {
 		input1.style.border = "1px solid #ff7675";
 		error1 = true;
 	}
-	else
-	{
+	else {
 		input1.style.border = "1px solid green";
 		error1 = false;
 	}
 
-	if(input2.value.length == 0)
-	{
+	if (input2.value.length == 0) {
 		input2.style.border = "1px solid #ff7675";
 		error2 = true;
 	}
-	else
-	{
+	else {
 		input2.style.border = "1px solid green";
 		error2 = false;
 	}
 
-	if(input3.value.length == 0 || isNaN(value1))
-	{
+	if (input3.value.length == 0 || isNaN(value1)) {
 		input3.style.border = "1px solid #ff7675";
 		input3.value = value1;
 		error3 = true;
 	}
-	else
-	{
+	else {
 		input3.style.border = "1px solid green";
 		input3.value = value1;
 		error3 = false;
 	}
 
-	
-	if(id == 'form3')
-	{
+
+	if (id == 'form3') {
 		error4 = false;
 	}
-	else
-	{
-		if(input4.value.length == 0 || isNaN(value2))
-		{
+	else {
+		if (input4.value.length == 0 || isNaN(value2)) {
 			input4.style.border = "1px solid #ff7675";
 			input4.value = value2;
 			error4 = true;
 		}
-		else
-		{
+		else {
 			input4.style.border = "1px solid green";
 			input4.value = value2;
 			error4 = false;
 		}
 	}
 
-	if(id == 'form2')
-	{
-		if(input5.value.length == 0 || isNaN(value3))
-		{
+	if (id == 'form2') {
+		if (input5.value.length == 0 || isNaN(value3)) {
 			input5.style.border = "1px solid #ff7675";
 			input5.value = value3;
 			error5 = true;
 		}
-		else
-		{
+		else {
 			input5.style.border = "1px solid green";
 			input5.value = value3;
 			error5 = false;
 		}
-		
-		if(input6.value.length == 0 || isNaN(value4))
-		{
+
+		if (input6.value.length == 0 || isNaN(value4)) {
 			input6.style.border = "1px solid #ff7675";
 			input6.value = value4;
 			error6 = true;
 		}
-		else
-		{
+		else {
 			input6.style.border = "1px solid green";
 			input6.value = value4;
 			error6 = false;
 		}
 	}
 
-	if(id == 'form2')
-	{
-		if(error1 == false && error2 == false && error3 == false && error4 == false && error5 == false && error6 == false)
-		{
+	if (id == 'form2') {
+		if (error1 == false && error2 == false && error3 == false && error4 == false && error5 == false && error6 == false) {
 			document.getElementById("submit2").disabled = true;
 			document.getElementById(id).submit();
 		}
 	}
-	else if(id == 'form1')
-	{
-		if(error1 == false && error2 == false && error3 == false && error4 == false)
-		{
+	else if (id == 'form1') {
+		if (error1 == false && error2 == false && error3 == false && error4 == false) {
 			document.getElementById("submit1").disabled = true;
 			document.getElementById(id).submit();
 		}
 	}
-	else
-	{
-		if(error1 == false && error2 == false && error3 == false)
-		{
+	else {
+		if (error1 == false && error2 == false && error3 == false) {
 			document.getElementById("submit1").disabled = true;
 			document.getElementById(id).submit();
 		}
@@ -420,22 +346,17 @@ function submitform(id)
 // 4) Ofertas (clientes)
 // 5) Proveedores (clientes)
 
-function search(from, to, type)
-{
+function search(from, to, type) {
 	var datafrom = document.getElementById(from).value;
 	postto = to;
-	if (loading3 == 0)
-	{
-		if (window.XMLHttpRequest)
-		{
+	if (loading3 == 0) {
+		if (window.XMLHttpRequest) {
 			ajaxconnection3 = new XMLHttpRequest();
 		}
-		else if (window.ActiveXObject)
-		{
+		else if (window.ActiveXObject) {
 			ajaxconnection3 = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		else
-		{
+		else {
 			alert("Problema con la conexión");
 			return false;
 		}
@@ -446,53 +367,42 @@ function search(from, to, type)
 		console.log(type);
 		console.log(url);
 		console.log(datafrom);
-		
+
 		ajaxconnection3.onreadystatechange = getdata3;
 		ajaxconnection3.open("GET", url, true);
-        ajaxconnection3.send();
-    }
-    else
-    {
-       	alert("Espere a terminar la carga");
-    }
+		ajaxconnection3.send();
+	}
+	else {
+		alert("Espere a terminar la carga");
+	}
 }
 
-function getdata3()
-{
-	if (ajaxconnection3.readyState == 4)
-	{
-		if (ajaxconnection3.status == 200)
-		{
+function getdata3() {
+	if (ajaxconnection3.readyState == 4) {
+		if (ajaxconnection3.status == 200) {
 			document.getElementById(postto).innerHTML = ajaxconnection3.responseText;
 		}
-		else
-		{
+		else {
 			alert("Problema al traer datos");
 		}
 		loading3 = 0;
 	}
-	else
-	{
+	else {
 		loading3 = 1;
 	}
 
 }
 
 // ARREGLAR
-function reset(id)
-{
-	if (loading4 == 0)
-	{
-		if (window.XMLHttpRequest)
-		{
+function reset(id) {
+	if (loading4 == 0) {
+		if (window.XMLHttpRequest) {
 			ajaxconnection4 = new XMLHttpRequest();
 		}
-		else if (window.ActiveXObject)
-		{
+		else if (window.ActiveXObject) {
 			ajaxconnection4 = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		else
-		{
+		else {
 			alert("Problema con la conexión");
 			return false;
 		}
@@ -500,47 +410,55 @@ function reset(id)
 		var url = "../actions/reset.php?data1=" + id;
 		ajaxconnection4.onreadystatechange = getdata4;
 		ajaxconnection4.open("GET", url, true);
-        ajaxconnection4.send();
-    }
-    else
-    {
-       	alert("Espere a terminar la carga");
-    }
+		ajaxconnection4.send();
+	}
+	else {
+		alert("Espere a terminar la carga");
+	}
 }
 
-function getdata4()
-{
-	if (ajaxconnection4.readyState == 4)
-	{
-		if (ajaxconnection4.status == 200)
-		{
+function getdata4() {
+	if (ajaxconnection4.readyState == 4) {
+		if (ajaxconnection4.status == 200) {
 			location.reload();
 		}
-		else
-		{
+		else {
 			alert("Problema al traer datos");
 		}
 		loading4 = 0;
 	}
-	else
-	{
+	else {
 		loading4 = 1;
 	}
 
 }
 
-function modificar(id){
-		
-		var id = id;
-		var valor = '#price'+id;
-		var price = $(valor).val();
-		console.log(price);
-		$.ajax({
-			data:  {"id": id , "price" : price },
-			url:   '../actions/editarticle.php',
-			type:  'post',
-			success:  function (response) {
-				location.reload();
-			}
-		});
-	}
+function modificar(id) {
+
+	var id = id;
+	var valor = '#price' + id;
+	var price = $(valor).val();
+	console.log(price);
+	$.ajax({
+		data: { "id": id, "price": price },
+		url: '../actions/editarticle.php',
+		type: 'post',
+		success: function (response) {
+			location.reload();
+		}
+	});
+}
+
+function eliminar(id) {
+
+	var id = id;
+	$.ajax({
+		data: { "id": id },
+		url: '../actions/deleteProduct.php',
+		type: 'post',
+		success: function (response) {
+			console.log(response);
+			location.reload();
+		}
+	});
+}

@@ -8,23 +8,23 @@
     <meta name="description" content="restocompras">
     <meta name="author" content="restocompras">
     
-    <link rel="shortcut icon" href="/img/resto.ico.png">
+    <link rel="shortcut icon" href="index/img/resto.ico.png">
 
     <title>RestoCompras</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="index/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="index/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="index/css/creative.min.css" rel="stylesheet">
 
   </head>
 
@@ -59,8 +59,8 @@
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <img class="img-fluid" src="/img/logo5.png"></img>
+          <div class="col-lg-6 mx-auto">
+            <img class="img-fluid" src="index/img/logo5.png"></img>
             </br>
             </br>
             <a class="btn btn-primary btn-xl" href="login.php" >Iniciar sesión</a>
@@ -87,96 +87,127 @@
     <section class="p-0" id="restoranes-bares">
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/1.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/1.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/1.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    Los Leños
                   </div>
                   <div class="project-name">
-                    Proveedor
+                    
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/2.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/2.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/2.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    NutriFresca
                   </div>
                   <div class="project-name">
-                    Proveedor
+                    
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/3.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/3.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/3.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    Carnicerias Integradas 
                   </div>
                   <div class="project-name">
-                    Proveedor
+                    Rosario
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/4.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/4.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/4.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    
                   </div>
                   <div class="project-name">
-                    Proveedor 
+                    Over Clean 
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/5.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/5.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/5.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    
                   </div>
                   <div class="project-name">
-                    Proveedor
+                    La Colonia Carnes
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="/img/portfolio/fullsize/6.jpg" alt="">
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/6.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/6.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Proveedor
+                    Carniceria
                   </div>
                   <div class="project-name">
-                    Proveedor
+                    S&H
                   </div>
                 </div>
               </div>
             </a>
           </div>
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/7.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/7.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Cafe
+                  </div>
+                  <div class="project-name">
+                    Guatemala
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="index/img/portfolio/fullsize/8.jpg">
+              <img class="img-fluid" src="index/img/portfolio/fullsize/8.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    
+                  </div>
+                  <div class="project-name">
+                    Mundo Clean
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -233,39 +264,29 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 ml-auto text-center">
-            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Rubén: +54 9 341 3780011</p>
-          </div>
-          <div class="col-lg-3 ml-auto text-center">
+          <div class="col-lg ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
             <p>Luis: +54 9 341 6412407</p>
           </div>
-          <div class="col-lg-3 ml-auto text-center">
+          <div class="col-lg ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>Martín: +54 9 341 3742955</p>
-          </div>
-          <div class="col-lg-3 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>
-              contacto@restocompras.com
-            </p>
+            <p>Tomas: +34 649006569</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="index/vendor/jquery/jquery.min.js"></script>
+    <script src="index/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="index/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="index/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="index/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="index/js/creative.min.js"></script>
 
   </body>
 
