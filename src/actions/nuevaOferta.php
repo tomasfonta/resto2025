@@ -39,11 +39,8 @@ if($_POST['oferta'])
 		{
 			$timeok = 1;
 		}
-		$time = strtotime("$timeok hours");
+	$time = strtotime("$timeok hours");
 	
-	
-	
-
 	$nameok = mysqli_real_escape_string($dbconnection, $form_name);
 	$brandok = mysqli_real_escape_string($dbconnection, $form_brand);
 	$dimensionok = mysqli_real_escape_string($dbconnection, $form_dimension);
@@ -82,9 +79,11 @@ if($_POST['oferta'])
 	
 	$owner = $_SESSION['id'];
 	
-	$sql = "INSERT INTO offers (offer_name, offer_brand, offer_dimension, offer_price, offer_minimun, offer_time, offer_ownername, offer_owner)
-		 VALUES ('$nameok', '$brandok', '$dimension', '$priceok', '$minimunok', '$time', '$ownername','$ownerok')";
+	$sql = "INSERT INTO offers (offer_name, offer_brand, offer_dimension, offer_price, offer_minimun, offer_time, offer_ownername, offer_owner, offer_category)
+		 VALUES ('$nameok', '$brandok', '$dimension', '$priceok', '$minimunok', '$time', '$ownername','$ownerok', '$categoryok')";
 	
+	echo($sql);
+
 	try{ 
 		
         mysqli_query($dbconnection, $sql);

@@ -103,7 +103,7 @@ if(!empty($_GET['pagina']))
 
 				case 'perfil':
 					$option = 'perfil';
-					$title = 'Solicitar';
+					$title = 'Perfil';
 					break;
 					
 				case 'perfilCliente':
@@ -113,7 +113,7 @@ if(!empty($_GET['pagina']))
 					
 				case 'solicitar':
 					$option = 'request';
-					$title = 'perfilCliente';
+					$title = 'Solicitar';
 					break;
 
 				default:

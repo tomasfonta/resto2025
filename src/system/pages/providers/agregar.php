@@ -276,7 +276,6 @@ function eliminar(id) {
 			url:   'actions/nuevaOferta.php',
 			type:  'post',
 			success:  function (response) {
-			    console.log(response);
 				$('#responseOferta').html(response);
 			    setTimeout(function(){location.reload(); }, 1000);
 			}
