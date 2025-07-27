@@ -1,6 +1,10 @@
-How to run the project
+This is the original idea of RestoCompras - Launchedn in early 2020s.
 
+Builded with:
+PHP
+MYSQL
 
+How to run the project?
 
 open a terminal and run ❯ docker-compose up  --build
 
